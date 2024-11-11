@@ -100,4 +100,51 @@ function Experience() {
     );
 }
 
+function Projects() {
+    return (
+        <section id="projects" className="container py-4">
+            <h2 className="text-center mb-4">Projects</h2>
+            <div className="row">
+                <div className="col-md-6">
+                    <div className="card mb-4">
+                        <div className="card-body">
+                            <h3 className="card-title">Omni-kom: Gamer-Connecting Platform</h3>
+                            <p className="card-text">Project description and details.</p>
+                            <p className="text-muted">
+                                <b>Date:</b> September 2023 - December 2023
+                            </p>
+                            <p className="text-muted">
+                                <b>Technologies:</b> Java, Swing, Lombok
+                            </p>
+                            <a href="#" className="btn btn-primary">
+                                Project Link {/* github link */}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-6">
+                    <div className="card mb-4">
+                        <div className="card-body">
+                            <h3 className="card-title">Tomorrow's Weather App</h3>
+                            <p className="card-text">Project description and details.</p>
+                            <p className="text-muted">
+                                <b>Date:</b> December 2023 - Ferbruary 2024
+                            </p>
+                            <p className="text-muted">
+                                <b>Technologies:</b> Python, Docker, Flask, Streamlit, Numpy, Cufflinks, Matplotlib, Scikit-learn
+                            </p>
+                            <a href="#" className="btn btn-primary">
+                                Project Link {/* github link */}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {/* ... (other project cards with similar structure) */}
+            </div>
+        </section>
+    );
+}
+
+
+
 ReactDOM.render([<Header />, <Skills />, <Experience />], document.getElementById('root'));
