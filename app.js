@@ -10,6 +10,12 @@ function Header() {
 }
 
 function Skills() {
+    const [showDetails, setShowDetails] = React.useState(false);
+
+    const toggleDetails = () => {
+        setShowDetails(!showDetails);
+    };
+
     return (
         <section id="skills" className="container py-4">
             <h2 className="text-center mb-4">Skills</h2>
@@ -20,7 +26,7 @@ function Skills() {
                     <ul className="list-group">
                         <li className="list-group-item">Java</li>
                         <li className="list-group-item">Spring</li>
-                        <li className="list-group-item">SQ</li>
+                        <li className="list-group-item">SQL</li>
                         <li className="list-group-item">Python</li>
                         <li className="list-group-item">Angular</li>
                         <li className="list-group-item">Bash</li>
