@@ -2,7 +2,7 @@ function Header() {
     return (
         <header className="bg-dark text-light py-4">
             <div className="container text-center">
-                <h1>Your Name</h1>
+                <h1>Krzysztof Lipski</h1>
                 <p className="lead">Software Engineer</p>
             </div>
         </header>
@@ -145,6 +145,26 @@ function Projects() {
     );
 }
 
+function Education() {
+    return (
+        <section id="education" className="container py-4">
+            <h2 className="text-center mb-4">Education</h2>
+            <div className="row">
+                <div className="col-md-6">
+                    <h3>Engineer's Degree in Computer Science</h3>
+                    <p>Polish-Japanese Academy of Information Technology</p>
+                    <p>Warsaw, Poland</p>
+                    <p>2024</p>
+                    {/* Future implementation for achievements */}
+                    {/* <p>Achievements: List of achievements</p> */}
+                </div>
+                {/* Add more education entries if needed */}
+            </div>
+        </section>
+    );
+}
 
-
-ReactDOM.render([<Header />, <Skills />, <Experience />], document.getElementById('root'));
+ReactDOM.render(
+    [<Header />, <Skills />, <Experience />, <Projects />, <Education />],
+    document.getElementById('root')
+);
