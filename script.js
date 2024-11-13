@@ -88,11 +88,17 @@ function Skills() {
     className: "list-group"
   }, /*#__PURE__*/React.createElement("li", {
     className: "list-group-item"
-  }, "Skill 7"), /*#__PURE__*/React.createElement("li", {
+  }, "Analytical thinking and problem-solvin"), /*#__PURE__*/React.createElement("li", {
     className: "list-group-item"
-  }, "Skill 8"), /*#__PURE__*/React.createElement("li", {
+  }, "Communication and teamwor"), /*#__PURE__*/React.createElement("li", {
     className: "list-group-item"
-  }, "Skill 9")))));
+  }, "Initiative and independence"), /*#__PURE__*/React.createElement("li", {
+    className: "list-group-item"
+  }, "Eagerness to learn and adaptabilite"), /*#__PURE__*/React.createElement("li", {
+    className: "list-group-item"
+  }, "Organization and efficience"), /*#__PURE__*/React.createElement("li", {
+    className: "list-group-item"
+  }, "Quick learning")))));
 }
 function Experience() {
   return /*#__PURE__*/React.createElement("section", {
@@ -102,7 +108,7 @@ function Experience() {
     className: "text-center mb-4"
   }, "Experience"), /*#__PURE__*/React.createElement("div", {
     className: "mb-4"
-  }, /*#__PURE__*/React.createElement("h3", null, "Job Title 1"), /*#__PURE__*/React.createElement("p", null, "Company Name"), /*#__PURE__*/React.createElement("p", null, "Dates of Employment"), /*#__PURE__*/React.createElement("p", null, "Responsibilities and achievements")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "Job Title 2"), /*#__PURE__*/React.createElement("p", null, "Company Name"), /*#__PURE__*/React.createElement("p", null, "Dates of Employment"), /*#__PURE__*/React.createElement("p", null, "Responsibilities and achievements")));
+  }, /*#__PURE__*/React.createElement("h3", null, "Freelancing"), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("i", null, "May 2022 - currently")), /*#__PURE__*/React.createElement("p", null, " Full-stack software development expert specializing in Java/ Spring backend and React.js frontend. Successfully delivered projects for various clients, demonstrating flexibility and strong client communication skills.")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "IT Department"), /*#__PURE__*/React.createElement("p", null, "Company Name"), /*#__PURE__*/React.createElement("p", null, "Dates of Employment"), /*#__PURE__*/React.createElement("p", null, "Responsibilities and achievements")));
 }
 function Projects() {
   return /*#__PURE__*/React.createElement("section", {

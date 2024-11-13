@@ -76,9 +76,14 @@ function Skills() {
                 <div className="col-md-4">
                     <h3>Soft Skills</h3>
                     <ul className="list-group">
-                        <li className="list-group-item">Skill 7</li>
-                        <li className="list-group-item">Skill 8</li>
-                        <li className="list-group-item">Skill 9</li>
+                        <li className="list-group-item">Analytical thinking and
+                            problem-solvin</li>
+                        <li className="list-group-item">Communication and
+                            teamwor</li>
+                        <li className="list-group-item">Initiative and independence</li>
+                        <li className="list-group-item">Eagerness to learn and adaptabilite</li>
+                        <li className="list-group-item">Organization and efficience</li>
+                        <li className="list-group-item">Quick learning</li>
                     </ul>
                 </div>
             </div>
@@ -91,14 +96,17 @@ function Experience() {
         <section id="experience" className="container py-4">
             <h2 className="text-center mb-4">Experience</h2>
             <div className="mb-4">
-                <h3>Job Title 1</h3>
-                <p>Company Name</p>
-                <p>Dates of Employment</p>
-                <p>Responsibilities and achievements</p>
+                <h3>Freelancing</h3>
+                {/* <p>Company Name</p> */}
+                <p><i>May 2022 - currently</i></p>
+                <p> Full-stack software development expert specializing in Java/
+                    Spring backend and React.js frontend. Successfully delivered
+                    projects for various clients, demonstrating flexibility and strong
+                    client communication skills.</p>
             </div>
             <div>
-                <h3>Job Title 2</h3>
-                <p>Company Name</p>
+                <h3>IT Department</h3>
+                <p>Toyota Motors Poland</p>
                 <p>Dates of Employment</p>
                 <p>Responsibilities and achievements</p>
             </div>
