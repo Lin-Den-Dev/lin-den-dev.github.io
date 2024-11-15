@@ -107,8 +107,15 @@ function Experience() {
             <div>
                 <h3>IT Department</h3>
                 <p>Toyota Motors Poland</p>
-                <p>Dates of Employment</p>
-                <p>Responsibilities and achievements</p>
+                <p><i>Sep 2021 - Dec 2022</i></p>
+                <p>Led the design and development of a web application,
+                    overcoming challenges in data integration and UI
+                    responsiveness to deliver a user-friendly solution.
+                    Proactively troubleshooted technical issues and implemented
+                    solutions, ensuring smooth project execution and minimizing
+                    downtime.
+                    Adapted quickly to new technologies and tools, contributing
+                    effectively to the project s success despite a steep learning curve.</p>
             </div>
         </section>
     );
