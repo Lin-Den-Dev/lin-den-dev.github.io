@@ -1,3 +1,10 @@
+const businessSkills = [
+    "IT project management",
+    "Process analysis and optimization",
+    "Technical documentation",
+    "Stakeholder communication"
+];
+
 function Header() {
     return (
         <header className="bg-dark text-light py-4">
@@ -10,10 +17,14 @@ function Header() {
 }
 
 function Skills() {
-    const [showDetails, setShowDetails] = React.useState(false);
+    const [showDetails, setShowDetails] = React.useState([]);
 
-    const toggleDetails = () => {
-        setShowDetails(!showDetails);
+    const toggleDetails = (index) => {
+        setShowDetails((prevState) => {
+            const newState = [...prevState];
+            newState[index] = !newState[index];
+            return newState;
+        });
     };
 
     return (
@@ -30,59 +41,41 @@ function Skills() {
                         <li className="list-group-item">Python</li>
                         <li className="list-group-item">Angular</li>
                         <li className="list-group-item">Bash</li>
-                        <li className="list-group-item">SQL</li>
                         <li className="list-group-item">Scrum</li>
                     </ul>
                 </div>
                 <div className="col-md-4">
                     <h3>Business Skills</h3>
                     <ul className="list-group">
-                        <li className="list-group-item">
-                            IT project management
-                            <button className="btn btn-link btn-sm" onClick={toggleDetails}>
-                                {showDetails ? "Show less" : "Show more"}
-                            </button>
-                            {showDetails && (
-                                <p className="text-muted mt-2">Planning, organizing, monitoring, and executing IT projects.</p>
-                            )}
-                        </li>
-                        <li className="list-group-item">
-                            Process analysis and optimization
-                            <button className="btn btn-link btn-sm" onClick={toggleDetails}>
-                                {showDetails ? "Show less" : "Show more"}
-                            </button>
-                            {showDetails && (
-                                <p className="text-muted mt-2">Identifying and eliminating bottlenecks in business processes.</p>
-                            )}
-                        </li>
-                        <li className="list-group-item">Technical documentation
-                            <button className="btn btn-link btn-sm" onClick={toggleDetails}>
-                                {showDetails ? "Show less" : "Show more"}
-                            </button>
-                            {showDetails && (
-                                <p className="text-muted mt-2">Creating clear and understandable project documentation and instructions.</p>
-                            )}
-                        </li>
-                        <li className="list-group-item">Stakeholder communication
-                            <button className="btn btn-link btn-sm" onClick={toggleDetails}>
-                                {showDetails ? "Show less" : "Show more"}
-                            </button>
-                            {showDetails && (
-                                <p className="text-muted mt-2"> Effective communication with business and technical teams.</p>
-                            )}
-                        </li>
+                        {businessSkills.map((skill, index) => (
+                            <li key={index} className="list-group-item">
+                                {skill}
+                                <button
+                                    className="btn btn-link btn-sm"
+                                    onClick={() => toggleDetails(index)}
+                                >
+                                    {showDetails[index] ? "Show less" : "Show more"}
+                                </button>
+                                {showDetails[index] && (
+                                    <p className="text-muted mt-2">
+                                        {skill === "IT project management" && "Planning, organizing, monitoring, and executing IT projects."}
+                                        {skill === "Process analysis and optimization" && "Identifying and eliminating bottlenecks in business processes."}
+                                        {skill === "Technical documentation" && "Creating clear and understandable project documentation and instructions."}
+                                        {skill === "Stakeholder communication" && "Effective communication with business and technical teams."}
+                                    </p>
+                                )}
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className="col-md-4">
                     <h3>Soft Skills</h3>
                     <ul className="list-group">
-                        <li className="list-group-item">Analytical thinking and
-                            problem-solvin</li>
-                        <li className="list-group-item">Communication and
-                            teamwor</li>
+                        <li className="list-group-item">Analytical thinking and problem-solving</li>
+                        <li className="list-group-item">Communication and teamwork</li>
                         <li className="list-group-item">Initiative and independence</li>
-                        <li className="list-group-item">Eagerness to learn and adaptabilite</li>
-                        <li className="list-group-item">Organization and efficience</li>
+                        <li className="list-group-item">Eagerness to learn and adaptability</li>
+                        <li className="list-group-item">Organization and efficiency</li>
                         <li className="list-group-item">Quick learning</li>
                     </ul>
                 </div>
@@ -149,7 +142,7 @@ function Projects() {
                             <h3 className="card-title">Tomorrow's Weather App</h3>
                             <p className="card-text">Project description and details.</p>
                             <p className="text-muted">
-                                <b>Date:</b> December 2023 - Ferbruary 2024
+                                <b>Date:</b> December 2023 - February 2024
                             </p>
                             <p className="text-muted">
                                 <b>Technologies:</b> Python, Docker, Flask, Streamlit, Numpy, Cufflinks, Matplotlib, Scikit-learn
@@ -185,7 +178,7 @@ function Education() {
     );
 }
 
-ReactDOM.render(
-    [<Header />, <Skills />, <Experience />, <Projects />, <Education />],
-    document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    [<Header key="header" />, <Skills key="skills" />, <Experience key="experience" />, <Projects key="projects" />, <Education key="education" />]
 );
